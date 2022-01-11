@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.app_stage_controller">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="10.0" prefHeight="17.0" prefWidth="382.0" style="-fx-background-color: grey;" text="There you go!!" textAlignment="CENTER" textFill="#cdd71e" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit_button" layoutX="569.0" layoutY="2.0" mnemonicParsing="false" onAction="#exit_button_processing" text="Exit" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Button fx:id="side_button" layoutX="500.0" layoutY="3.0" mnemonicParsing="false" onAction="#toSide_button_processing" text="to side" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="2.0" />
+      <ToolBar fx:id="first_tab" layoutX="2.0" layoutY="46.0">
+         <items>
+            <Button mnemonicParsing="false" onMouseClicked="#next_tab" text="Next tab" />
+            <Button fx:id="side_button1" mnemonicParsing="false" onAction="#search_button_processing" text="search on the web" />
+            <Button fx:id="side_button11" mnemonicParsing="false" onAction="#mouse_listener_button_processing" text="start mouse listener" />
+            <Button fx:id="time_calc_button" mnemonicParsing="false" onAction="#calculator_button_processing" text="time calculator" />
+            <Button fx:id="imperial_button" mnemonicParsing="false" onAction="#imperial_button_processing" text="imperial cooking" />
+         </items>
+      </ToolBar>
+      <ListView fx:id="clipboard_list" layoutX="14.0" layoutY="91.0" onMouseClicked="#handleMouseClick" prefHeight="257.0" prefWidth="485.0" />
+      <Button fx:id="clear_list_button" layoutX="508.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#clear_list" prefHeight="29.0" prefWidth="94.0" text="Clear history" />
+      <Button layoutX="203.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#create_db" text="connect to db" />
+      <Button layoutX="64.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#purge_table" text="purge data" />
+      <ToolBar fx:id="second_tab" layoutY="37.0" prefHeight="47.0" prefWidth="613.0" visible="false">
+        <items>
+          <Button mnemonicParsing="false" onMouseClicked="#open_body_training" text="open body training" />
+            <Button mnemonicParsing="false" onMouseClicked="#back_to_last_tab" text="Back to last tab" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

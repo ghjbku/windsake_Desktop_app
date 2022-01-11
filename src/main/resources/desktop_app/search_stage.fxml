@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.search_controller">
+   <children>
+      <WebView fx:id="web_view" layoutX="3.0" layoutY="35.0" prefHeight="364.0" prefWidth="594.0" />
+      <TextField fx:id="text_field" layoutX="14.0" layoutY="10.0" onKeyPressed="#search_key" prefHeight="25.0" prefWidth="261.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="274.0" layoutY="2.0" mnemonicParsing="false" onAction="#search_button_processing" text="Search" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="495.0" layoutY="2.0" mnemonicParsing="false" onAction="#back_button_processing" text="Back" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="556.0" layoutY="2.0" mnemonicParsing="false" onAction="#exit_button_processing" text="Exit" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="450.0" layoutY="2.0" mnemonicParsing="false" onAction="#toSide_button_processing" text="to side" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="2.0" />
+   </children>
+</AnchorPane>

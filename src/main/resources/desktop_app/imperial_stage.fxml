@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.imperial_controller">
+   <children>
+      <Button layoutX="429.0" layoutY="11.0" mnemonicParsing="false" onAction="#toSide_button_processing" prefHeight="37.0" prefWidth="73.0" text="Hide" />
+      <Button layoutX="522.0" layoutY="11.0" mnemonicParsing="false" onAction="#exit_button_processing" prefHeight="37.0" prefWidth="60.0" text="Exit" />
+      <TextField fx:id="mastery_points" layoutX="25.0" layoutY="36.0" prefHeight="25.0" prefWidth="186.0" promptText="mastery points" AnchorPane.topAnchor="36.0" />
+      <Label layoutX="29.0" layoutY="21.0" prefHeight="17.0" prefWidth="111.0" text="your mastery points:" AnchorPane.topAnchor="21.0" />
+      <Label fx:id="minutes_area" layoutX="32.0" layoutY="78.0" prefHeight="17.0" prefWidth="149.0" text="what is the box tier:" AnchorPane.topAnchor="78.0" />
+      <Label fx:id="hours_area" layoutX="25.0" layoutY="136.0" prefHeight="17.0" prefWidth="149.0" text="how many boxes:" AnchorPane.topAnchor="136.0" />
+      <Separator layoutX="19.0" layoutY="66.0" prefHeight="10.0" prefWidth="200.0" />
+      <Separator layoutX="19.0" layoutY="134.0" prefWidth="200.0" />
+      <Separator layoutX="510.0" layoutY="4.0" orientation="VERTICAL" prefHeight="56.0" prefWidth="2.0" />
+      <Separator layoutX="216.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="193.0" prefWidth="6.0" />
+      <Separator layoutX="19.0" layoutY="186.0" prefWidth="200.0" />
+      <Separator layoutX="327.0" layoutY="59.0" prefHeight="3.0" prefWidth="276.0" />
+      <Separator layoutX="415.0" layoutY="4.0" orientation="VERTICAL" prefHeight="56.0" prefWidth="2.0" />
+      <Button layoutX="333.0" layoutY="11.0" mnemonicParsing="false" onAction="#back_button_processing" prefHeight="37.0" prefWidth="73.0" text="Back" />
+      <Button layoutX="68.0" layoutY="200.0" mnemonicParsing="false" onMousePressed="#calculate" prefHeight="25.0" prefWidth="91.0" text="calculate" />
+      <Label fx:id="gain_label" layoutX="22.0" layoutY="240.0" prefHeight="17.0" prefWidth="270.0" text="your gain this round:" />
+      <Separator layoutX="19.0" layoutY="237.0" prefWidth="200.0" />
+      <Separator layoutX="20.0" layoutY="291.0" prefWidth="200.0" />
+      <Separator layoutX="324.0" layoutY="2.0" orientation="VERTICAL" prefHeight="56.0" prefWidth="2.0" />
+      <TextField fx:id="box_tier_field" layoutX="26.0" layoutY="103.0" onMouseEntered="#show_box_tiers" onMouseExited="#hide_box_tiers" prefHeight="25.0" prefWidth="186.0" promptText="guru,master,artisan,professional,skilled,apprentice" />
+      <Label fx:id="tier_label" layoutX="20.0" layoutY="74.0" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: white;" text="guru,master,artisan,professional,skilled,apprentice" visible="false" />
+      <TextField fx:id="boxes_sold" layoutX="25.0" layoutY="152.0" prefHeight="25.0" prefWidth="186.0" promptText="boxes sold" />
+      <Separator layoutX="17.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="193.0" prefWidth="6.0" />
+      <Label fx:id="acc_profit_label" layoutX="22.0" layoutY="274.0" prefHeight="17.0" prefWidth="310.0" text="accumulated profit:" />
+      <Label fx:id="hours_area1" layoutX="234.0" layoutY="133.0" prefHeight="17.0" prefWidth="207.0" text="how much silver you spent, if anything" />
+      <TextField fx:id="silver_spent" layoutX="231.0" layoutY="152.0" prefHeight="25.0" prefWidth="186.0" promptText="silver amount" />
+      <Label fx:id="bonus_label" layoutX="22.0" layoutY="257.0" prefHeight="17.0" prefWidth="200.0" text="\% bonus from your mastery:" />
+      <CheckBox layoutX="231.0" layoutY="107.0" mnemonicParsing="false" onAction="#on_clicked" text="box price is 250% higher" />
+   </children>
+</AnchorPane>

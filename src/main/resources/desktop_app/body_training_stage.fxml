@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.body_training_controller">
+    <children>
+        <Button layoutX="429.0" layoutY="11.0" mnemonicParsing="false" onAction="#toSide_button_processing" prefHeight="37.0" prefWidth="73.0" text="Hide" />
+        <Button layoutX="522.0" layoutY="11.0" mnemonicParsing="false" onAction="#exit_button_processing" prefHeight="37.0" prefWidth="60.0" text="Exit" />
+        <Separator layoutX="19.0" layoutY="73.0" prefWidth="200.0" />
+        <Separator layoutX="19.0" layoutY="124.0" prefWidth="200.0" />
+        <Separator layoutX="510.0" layoutY="4.0" orientation="VERTICAL" prefHeight="56.0" prefWidth="2.0" />
+        <Separator layoutX="216.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="288.0" prefWidth="6.0" />
+        <Separator layoutX="19.0" layoutY="175.0" prefWidth="200.0" />
+        <Separator layoutX="16.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="288.0" prefWidth="6.0" />
+        <Separator layoutX="327.0" layoutY="59.0" prefHeight="3.0" prefWidth="276.0" />
+        <Separator layoutX="415.0" layoutY="4.0" orientation="VERTICAL" prefHeight="56.0" prefWidth="2.0" />
+        <Button layoutX="333.0" layoutY="11.0" mnemonicParsing="false" onAction="#back_button_processing" prefHeight="37.0" prefWidth="73.0" text="Back" />
+        <Separator layoutX="324.0" layoutY="2.0" orientation="VERTICAL" prefHeight="56.0" prefWidth="2.0" />
+      <Label fx:id="str_label" layoutX="17.0" layoutY="4.0" prefHeight="35.0" prefWidth="200.0" text="Strength level: 1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="86.0" prefHeight="26.0" prefWidth="106.0" text="max pushups:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="max_pushups_textfield" layoutX="130.0" layoutY="85.0" prefHeight="29.0" prefWidth="85.0" promptText="0" />
+      <Label fx:id="last_max_push" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="19.0" layoutY="138.0" lineSpacing="2.0" prefHeight="25.0" prefWidth="200.0" text="last maximum pushups:0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="50.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#send_new_max" text="Send new maximum" />
+      <Button layoutX="245.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#show_data" text="show history" />
+      <ListView fx:id="history_list" layoutX="245.0" layoutY="124.0" prefHeight="200.0" prefWidth="313.0" />
+      <Button layoutX="468.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#clear_history" prefHeight="29.0" prefWidth="91.0" text="clear history" />
+      <Separator layoutX="14.0" layoutY="225.0" prefHeight="3.0" prefWidth="206.0" />
+      <Label layoutX="19.0" layoutY="187.0" prefHeight="26.0" prefWidth="106.0" text="max situps:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="max_situps_textfield" layoutX="109.0" layoutY="186.0" prefHeight="29.0" prefWidth="106.0" promptText="0" />
+      <Separator layoutX="16.0" layoutY="283.0" prefHeight="3.0" prefWidth="206.0" />
+      <Label fx:id="last_max_sit" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="19.0" layoutY="241.0" lineSpacing="2.0" prefHeight="25.0" prefWidth="200.0" text="last maximum situps:0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="level_string" layoutX="17.0" layoutY="39.0" prefHeight="19.0" prefWidth="151.0" text="Nobody" textFill="#f50505" />
+    </children>
+</AnchorPane>

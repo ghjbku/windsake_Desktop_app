@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="thepane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.listener_controller">
+   <children>
+      <Button fx:id="switch_button" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#start_button_processing" text="Start/Stop" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="495.0" layoutY="2.0" mnemonicParsing="false" onAction="#back_button_processing" text="Back" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="556.0" layoutY="2.0" mnemonicParsing="false" onAction="#exit_button_processing" text="Exit" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Button layoutX="450.0" layoutY="2.0" mnemonicParsing="false" onAction="#toSide_button_processing" text="to side" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="2.0" />
+      <TextArea fx:id="text_field" layoutX="6.0" layoutY="70.0" prefHeight="317.0" prefWidth="589.0" />
+      <Circle fill="#ff371f" layoutY="250.0" radius="5.0" stroke="#d70606" strokeType="INSIDE" />
+      <Circle fill="#ff371f" layoutY="500.0" radius="5.0" stroke="#d70606" strokeType="INSIDE" />
+      <Circle fill="#ff371f" layoutY="750.0" radius="5.0" stroke="#d70606" strokeType="INSIDE" />
+      <Circle fill="#ff371f" radius="5.0" stroke="#d70606" strokeType="INSIDE" />
+      <Circle fill="#3621ff" layoutX="250.0" radius="5.0" stroke="#064dd6" strokeType="INSIDE" />
+      <Circle fill="#3621ff" layoutX="500.0" radius="5.0" stroke="#064dd6" strokeType="INSIDE" />
+      <Circle fill="#3621ff" layoutX="750.0" radius="5.0" stroke="#064dd6" strokeType="INSIDE" />
+      <Circle fill="#3621ff" layoutX="1000.0" radius="5.0" stroke="#064dd6" strokeType="INSIDE" />
+      <Circle fill="#ff371f" layoutY="1000.0" radius="5.0" stroke="#d70606" strokeType="INSIDE" />
+      <Circle fill="#ff371f" layoutY="1250.0" radius="5.0" stroke="#d70606" strokeType="INSIDE" />
+      <Circle fill="#3621ff" layoutX="1250.0" radius="5.0" stroke="#064dd6" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

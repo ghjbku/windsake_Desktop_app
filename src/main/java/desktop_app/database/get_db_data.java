@@ -9,19 +9,27 @@ import java.util.Scanner;
 
 public class get_db_data {
     private String data ="";
+    private final String db_file_name_training ="\\db_data.txt";
+    private final String db_file_name_clip ="\\db_data_clipboard.txt";
     private String[] credentials = new String[6];
 
-    public get_db_data(){
-        data = get_database_data();
+    public get_db_data(String which){
+        data = get_database_data(which);
         process_data(data);
     }
 
-    private String get_database_data(){
+    private String get_database_data(String which_table){
+        String url = "";
         //url port db_name username password table_name
+        if(which_table.equals("training")){
+            url = db_file_name_training;
+        }else if(which_table.equals("clipboard")){
+            url = db_file_name_clip;
+        }
+
         try {
             File file = new File(App.class.getProtectionDomain().getCodeSource().getLocation().toURI());
-            System.out.println(file);
-            Scanner myReader = new Scanner(new File(file.getParentFile().getParent()+ "\\db_data.txt"));
+            Scanner myReader = new Scanner(new File(file.getParentFile().getParent()+ url));
             while (myReader.hasNextLine()) {
                 data = myReader.nextLine();
             }

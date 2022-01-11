@@ -1,5 +1,6 @@
 package desktop_app;
 
+import desktop_app.database.get_db_data;
 import desktop_app.database.sql_connect;
 import desktop_app.key_listener.global_key_listener;
 import javafx.fxml.FXML;
@@ -23,8 +24,9 @@ public class app_stage_controller {
     private static boolean ctrlPressed = false;
     static Scene thescene;
     static global_key_listener dummy_listener;
+    private static get_db_data db_data;
     sql_connect connection;
-    String table_name = "DataTable";
+    private static String table_name;
     Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
 
     @FXML
@@ -37,7 +39,9 @@ public class app_stage_controller {
     @FXML
     void initialize() {
         set_up_listener();
-        connection = new sql_connect("db4free.net", "3306", "windsake", "windsake", "123456789");
+        db_data = new get_db_data("clipboard");
+        table_name = db_data.get_db_table();
+        connection = new sql_connect(db_data.get_db_url(), db_data.get_db_port(), db_data.get_db_name(), db_data.get_db_user(), db_data.get_db_pw());
     }
 
     public void set_up_listener() {
@@ -174,7 +178,7 @@ public class app_stage_controller {
         final ClipboardContent content = new ClipboardContent();
 
         if (connection.get_connection().isClosed()) {
-            connection = new sql_connect("db4free.net", "3306", "windsake", "windsake", "123456789");
+            connection = new sql_connect(db_data.get_db_url(), db_data.get_db_port(), db_data.get_db_name(), db_data.get_db_user(), db_data.get_db_pw());
         }
         Connection con = connection.get_connection();
         try {
@@ -192,9 +196,8 @@ public class app_stage_controller {
 
     @FXML
     public void create_db() throws SQLException {
-        //here jdbc:mysql://db4free.net:3306/windsake","windsake","123456789"
         if (connection.get_connection().isClosed()) {
-            connection = new sql_connect("db4free.net", "3306", "windsake", "windsake", "123456789");
+            connection = new sql_connect(db_data.get_db_url(), db_data.get_db_port(), db_data.get_db_name(), db_data.get_db_user(), db_data.get_db_pw());
         }
         Connection con = connection.get_connection();
         connection.select_query(con, table_name);
@@ -203,7 +206,7 @@ public class app_stage_controller {
     @FXML
     public void purge_table() throws SQLException {
         if (connection.get_connection().isClosed()) {
-            connection = new sql_connect("db4free.net", "3306", "windsake", "windsake", "123456789");
+            connection = new sql_connect(db_data.get_db_url(), db_data.get_db_port(), db_data.get_db_name(), db_data.get_db_user(), db_data.get_db_pw());
         }
         Connection con = connection.get_connection();
         connection.purge_table(con, table_name);

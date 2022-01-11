@@ -46,7 +46,7 @@ public class body_training_controller {
 
     @FXML
     void initialize() {
-        db_data = new get_db_data();
+        db_data = new get_db_data("training");
         table_name = db_data.get_db_table();
         this.connection = new sql_connect(db_data.get_db_url(), db_data.get_db_port(), db_data.get_db_name(), db_data.get_db_user(), db_data.get_db_pw());
         this.levels = new levelup_values();

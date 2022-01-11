@@ -25,3 +25,4 @@ hs_err_pid*
 .idea
 target/
 db_data.txt
+db_data_clipboard.TXT

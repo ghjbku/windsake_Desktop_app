@@ -22,9 +22,8 @@ import javafx.stage.Stage;
 public class body_training_controller {
     Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
     static Scene thescene;
-    private get_db_data db_data;
-    private final String database_credentials = db_data.get_database_data();
-    private static final String table_name = "body_training";
+    private static get_db_data db_data;
+    private static String table_name;
     sql_connect connection;
     levelup_values levels;
     @FXML
@@ -47,10 +46,11 @@ public class body_training_controller {
 
     @FXML
     void initialize() {
-        this.connection = new sql_connect("db4free.net", "3306", "windsake", "windsake", "123456789");
+        db_data = new get_db_data();
+        table_name = db_data.get_db_table();
+        this.connection = new sql_connect(db_data.get_db_url(), db_data.get_db_port(), db_data.get_db_name(), db_data.get_db_user(), db_data.get_db_pw());
         this.levels = new levelup_values();
         this.set_max_of_methods();
-        System.out.println(database_credentials);
     }
 
     @FXML
@@ -107,8 +107,8 @@ public class body_training_controller {
             this.connection.insert_data(this.connection.get_connection(), "body_training", "str,max_pushups,max_situps", lvl + "," + max_p + "," + max_s);
             this.show_level();
             this.show_data();
-        } catch (Exception var5) {
-            var5.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -142,8 +142,8 @@ public class body_training_controller {
             this.connection = this.connect_to_sql();
             this.connection.select_query(this.connection.get_connection(), "body_training");
             this.display_data_on_list(this.connection.get_result());
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -172,8 +172,8 @@ public class body_training_controller {
                 try {
                     data.append(rsmd.getColumnName(i)).append(": ").append(rs.getObject(i)).append(" ");
                     ++i;
-                } catch (Exception var7) {
-                    var7.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
 

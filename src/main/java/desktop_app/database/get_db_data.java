@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class get_db_data {
 
     public String get_database_data(){
-
+        //url port db_name username password table_name
         String data="empty";
         try {
             File file = new File(App.class.getProtectionDomain().getCodeSource().getLocation().toURI());

@@ -3,3 +3,8 @@ db_data.txt and db_data_clipboard.txt should be next to the created jar file
 
 example data:
 url,port,db_name,username,password,table_name
+
+
+clipboard gif:
+
+![](https://cdn.discordapp.com/attachments/838073521850155029/930794834854314004/desktop_app_clipboard_1.gif)

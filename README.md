@@ -1,6 +1,8 @@
 # desktop_app
 db_data.txt and db_data_clipboard.txt should be next to the created jar file
 
+**minimum jre 11 is needed for the jar to be runnable!**
+
 example data:
 url,port,db_name,username,password,table_name
 

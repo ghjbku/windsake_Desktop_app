@@ -20,3 +20,8 @@ clipboard gif of database connection:
 body_training gif:
 
 ![](https://cdn.discordapp.com/attachments/838073521850155029/930801327028727818/desktop_app_body.gif)
+
+
+gif of everything else but the mouse listener, as that one isnt functional yet:
+
+![](https://cdn.discordapp.com/attachments/838073521850155029/930804720816250900/desktop_app_everything_else.gif)

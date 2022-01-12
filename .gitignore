@@ -23,6 +23,11 @@
 hs_err_pid*
 
 .idea
-target/
+target/classes/
+target/generated-sources
+target/maven-archiver
+target/maven-status
+target/original-desktop_app-1.0-SNAPSHOT.jar
+target/JNativeHook.x86_64.dll
 db_data.txt
 db_data_clipboard.TXT

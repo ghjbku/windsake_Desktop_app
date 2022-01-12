@@ -1,5 +1,6 @@
-package desktop_app;
+package desktop_app.controllers;
 
+import desktop_app.App;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

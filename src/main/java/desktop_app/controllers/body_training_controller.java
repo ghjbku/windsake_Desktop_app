@@ -1,5 +1,6 @@
-package desktop_app;
+package desktop_app.controllers;
 
+import desktop_app.App;
 import desktop_app.database.get_db_data;
 import desktop_app.database.levelup_values;
 import desktop_app.database.sql_connect;
@@ -20,12 +21,12 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class body_training_controller {
-    Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
+    private static final Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
     static Scene thescene;
     private static get_db_data db_data;
     private static String table_name;
-    sql_connect connection;
-    levelup_values levels;
+    private static sql_connect connection;
+    private static levelup_values levels;
     @FXML
     TextField max_pushups_textfield;
     @FXML

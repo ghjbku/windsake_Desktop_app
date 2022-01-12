@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.search_controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop_app.controllers.search_controller">
    <children>
       <WebView fx:id="web_view" layoutX="3.0" layoutY="35.0" prefHeight="364.0" prefWidth="594.0" />
       <TextField fx:id="text_field" layoutX="14.0" layoutY="10.0" onKeyPressed="#search_key" prefHeight="25.0" prefWidth="261.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0" />

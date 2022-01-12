@@ -1,5 +1,7 @@
-package desktop_app;
+package desktop_app.controllers;
 
+import desktop_app.App;
+import desktop_app.database.imperial_data;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;

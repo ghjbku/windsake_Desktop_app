@@ -110,7 +110,7 @@ public class sql_connect {
             st.executeUpdate("INSERT INTO " + table_name + " ("+data_name+") "
                     + "VALUES (" + data + ")");
         } catch (Exception e) {
-            System.err.println("Got an exception!");
+            System.err.println("Got an exception while inserting! tablename: "+table_name + " dataname: "+data_name+" data:"+data);
             System.err.println(e.getMessage());
         }
     }

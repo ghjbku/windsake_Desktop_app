@@ -1,4 +1,4 @@
-package desktop_app;
+package desktop_app.database;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,5 +1,6 @@
-package desktop_app;
+package desktop_app.controllers;
 
+import desktop_app.App;
 import desktop_app.database.get_db_data;
 import desktop_app.database.sql_connect;
 import desktop_app.key_listener.global_key_listener;
@@ -186,7 +187,7 @@ public class app_stage_controller {
                 content.putString(clipboard_list.getSelectionModel().getSelectedItem());
                 Clipboard.getSystemClipboard().
                         setContent(content);
-                connection.insert_data(con, table_name,"data", content.getString());
+                connection.insert_data(con, table_name,"data","'"+ content.getString()+"'");
             }
         }catch (Exception e){
             e.printStackTrace();

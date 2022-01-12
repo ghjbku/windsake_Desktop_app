@@ -22,9 +22,6 @@
 hs_err_pid*
 
 .idea
-target/classes/
-target/generated-sources/
-target/maven-archiver/
-target/maven-status/
+target/
 db_data.txt
 db_data_clipboard.TXT

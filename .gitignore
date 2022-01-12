@@ -27,6 +27,5 @@ target/classes/
 target/generated-sources/
 target/maven-archiver/
 target/maven-status/
-target/JNativeHook.x86_64.dll
 db_data.txt
 db_data_clipboard.TXT

@@ -84,7 +84,7 @@ public class body_training_controller {
         Stage stage = App.getstage();
         thescene = stage.getScene();
         App.Is_training_on = true;
-        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("base.fxml"));
+        Parent root = FXMLLoader.load(App.get_base());
         stage.setScene(new Scene(root, (double)base_width, (double)base_height));
         double x = this.bounds.getMaxX() - 60.0D;
         double y = this.bounds.getMaxY() / 1.5D;

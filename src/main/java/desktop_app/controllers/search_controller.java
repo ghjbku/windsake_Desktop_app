@@ -56,7 +56,7 @@ public class search_controller {
         Stage stage = App.getstage();
         thescene = stage.getScene();
         App.Is_search_on = true;
-        Parent root = FXMLLoader.load(getClass().getResource("base.fxml"));
+        Parent root = FXMLLoader.load(App.get_base());
         stage.setScene(new Scene(root, base_width, base_height));
         double x = bounds.getMaxX() - 60;
         double y = bounds.getMaxY() / 1.5;

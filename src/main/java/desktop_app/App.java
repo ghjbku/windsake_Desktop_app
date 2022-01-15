@@ -10,11 +10,13 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
 
 
 public class App extends Application {
-    static Stage primarystage;
-    static Scene thescene;
+    private static Stage primarystage;
+    private static Scene thescene;
+    private static URL base_fxml;
     public static boolean Is_search_on=false;
     public static boolean Is_listening_on=false;
     public static boolean Is_calc_on=false;
@@ -22,8 +24,10 @@ public class App extends Application {
     public static boolean Is_clipboard_on=false;
     public static boolean Is_training_on=false;
 
+
     private void setstage(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("base.fxml"));
+        base_fxml = this.getClass().getResource("base.fxml");
+        Parent root = FXMLLoader.load(base_fxml);
         primaryStage.setScene(new Scene(root, 100, 30));
         Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
         double x = bounds.getMaxX() - 60;
@@ -52,4 +56,5 @@ public class App extends Application {
     public static Scene getscene(){
         return thescene;
     }
+    public static URL get_base(){return base_fxml;}
 }
